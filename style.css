@@ -1,0 +1,227 @@
+/* 🌌 Загальні стилі */
+body {
+	font-family: 'Segoe UI', sans-serif;
+	background: linear-gradient(145deg, #0a1f33, #122b45);
+	color: #fff;
+	margin: 0;
+	padding: 0;
+}
+
+.container {
+	max-width: 1100px;
+	margin: 30px auto;
+	padding: 20px 30px;
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 20px;
+	box-shadow: 0 0 25px rgba(0, 0, 0, 0.4);
+}
+
+h1 {
+	text-align: center;
+	color: #00bcd4;
+	font-size: 26px;
+}
+
+.subtitle {
+	text-align: center;
+	font-size: 18px;
+	color: #ccc;
+	margin-bottom: 25px;
+}
+
+.section {
+	margin-top: 30px;
+}
+
+.section-title {
+	display: flex;
+	align-items: center;
+	font-size: 20px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: #7cd8ff;
+}
+
+.section-title span:first-child {
+	margin-right: 10px;
+}
+
+table {
+	width: 100%;
+	border-collapse: collapse;
+	margin-top: 10px;
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 12px;
+	overflow: hidden;
+}
+
+th,
+td {
+	padding: 10px 15px;
+	text-align: center;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+th {
+	background: rgba(255, 255, 255, 0.1);
+	color: #00e5ff;
+	text-transform: uppercase;
+	font-size: 13px;
+	letter-spacing: 1px;
+}
+
+select,
+input[type='number'] {
+	padding: 5px 8px;
+	border-radius: 8px;
+	border: none;
+	outline: none;
+	font-size: 14px;
+	width: 90%;
+	text-align: center;
+}
+
+select {
+	background-color: #142c44;
+	color: #fff;
+}
+
+input[type='number'] {
+	background-color: #0f253d;
+	color: #fff;
+}
+
+.setting-card {
+	background: rgba(255, 255, 255, 0.05);
+	border-radius: 15px;
+	padding: 15px;
+	margin-bottom: 15px;
+}
+
+.input-group label {
+	display: block;
+	font-weight: bold;
+	color: #90e0ef;
+	margin-bottom: 5px;
+}
+
+.settings-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+	gap: 15px;
+}
+
+button {
+	display: block;
+	margin: 30px auto;
+	background: linear-gradient(90deg, #00bcd4, #0097a7);
+	color: #fff;
+	border: none;
+	border-radius: 25px;
+	padding: 12px 25px;
+	font-size: 18px;
+	cursor: pointer;
+	transition: 0.3s;
+}
+
+button:hover {
+	background: linear-gradient(90deg, #00eaff, #00bcd4);
+	transform: scale(1.05);
+}
+
+.results {
+	margin-top: 40px;
+	text-align: center;
+	display: none;
+}
+
+.results.show {
+	display: block;
+}
+
+.gauge-container {
+	position: relative;
+	width: 200px;
+	margin: 0 auto;
+}
+
+svg {
+	width: 200px;
+	height: 100px;
+}
+
+.gauge-value {
+	font-size: 30px;
+	font-weight: bold;
+	margin-top: 10px;
+	color: #00e5ff;
+}
+
+.gauge-label {
+	font-size: 16px;
+	color: #ccc;
+	margin-bottom: 20px;
+}
+
+.conclusion-box {
+	font-size: 18px;
+	font-weight: bold;
+	color: #fff;
+	padding: 15px;
+	background: rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	margin: 15px auto;
+	max-width: 600px;
+}
+
+.risk-chart {
+	margin-top: 30px;
+	text-align: left;
+}
+
+.chart-title {
+	font-size: 18px;
+	color: #7cd8ff;
+	margin-bottom: 10px;
+}
+
+.bar-chart {
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+}
+
+.bar-item {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.bar-label {
+	width: 40px;
+	font-weight: bold;
+}
+
+.bar-container {
+	flex: 1;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	overflow: hidden;
+}
+
+.bar-fill {
+	height: 18px;
+	background: linear-gradient(90deg, #00bcd4, #80deea);
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-right: 8px;
+	border-radius: 10px;
+	transition: width 0.6s ease;
+}
+
+.bar-fill span {
+	font-size: 12px;
+	color: #001b2e;
+	font-weight: bold;
+}

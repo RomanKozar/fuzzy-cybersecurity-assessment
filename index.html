@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="uk">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Оцінювання ризиків польотів UAV</title>
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="header">
+				<h1>
+					Гібридна інтелектуальна модель оцінювання ризиків польотів
+					безпілотників над об'єктами критичної інфраструктури
+				</h1>
+			</div>
+
+			<!-- Criteria Table -->
+			<div class="section">
+				<div class="section-title">
+					<span>📊</span>
+					<span>Оцінка критеріїв ризику та вагові коефіцієнти</span>
+				</div>
+				<table id="criteriaTable">
+					<thead>
+						<tr>
+							<th>Критерій</th>
+							<th>Лінгвістична оцінка</th>
+							<th>Достовірність ε(T)</th>
+							<th>Вага (1-10)</th>
+						</tr>
+					</thead>
+					<tbody id="criteriaBody"></tbody>
+				</table>
+			</div>
+
+			<!-- Settings -->
+			<div class="section">
+				<div class="section-title">
+					<span>⚙️</span>
+					<span>Налаштування моделі</span>
+				</div>
+				<div class="settings-grid">
+					<div class="setting-card">
+						<div class="input-group">
+							<label for="scenario">Сценарій польоту</label>
+							<select id="scenario">
+								<option value="S1">S₁ - Песимістичний</option>
+								<option value="S2">S₂ - Обережний</option>
+								<option value="S3" selected>S₃ - Середній</option>
+								<option value="S4">S₄ - Оптимістичний</option>
+							</select>
+						</div>
+					</div>
+
+					<div class="setting-card">
+						<div class="input-group">
+							<label for="threatLevel">Рівень загроз</label>
+							<select id="threatLevel">
+								<option value="C1">C₁ - Мінімальний</option>
+								<option value="C2" selected>C₂ - Низький</option>
+								<option value="C3">C₃ - Середній</option>
+								<option value="C4">C₄ - Високий</option>
+								<option value="C5">C₅ - Максимальний</option>
+							</select>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<button onclick="calculateRisk()">🚀 Розрахувати ризик</button>
+
+			<!-- Results -->
+			<div class="results" id="results">
+				<h2>📈 Результати оцінювання</h2>
+
+				<div class="gauge-container">
+					<svg viewBox="0 0 200 100">
+						<defs>
+							<linearGradient
+								id="gaugeGradient"
+								x1="0%"
+								y1="0%"
+								x2="100%"
+								y2="0%"
+							>
+								<stop offset="0%" style="stop-color: #ff4444" />
+								<stop offset="50%" style="stop-color: #ffd700" />
+								<stop offset="100%" style="stop-color: #44ff44" />
+							</linearGradient>
+						</defs>
+						<path
+							d="M 20 90 A 80 80 0 0 1 180 90"
+							fill="none"
+							stroke="rgba(255,255,255,0.3)"
+							stroke-width="20"
+							stroke-linecap="round"
+						/>
+						<path
+							id="gaugeFill"
+							d="M 20 90 A 80 80 0 0 1 180 90"
+							fill="none"
+							stroke="url(#gaugeGradient)"
+							stroke-width="20"
+							stroke-linecap="round"
+							stroke-dasharray="251.2"
+							stroke-dashoffset="251.2"
+						/>
+					</svg>
+				</div>
+
+				<div class="gauge-value" id="riskValue">0.000</div>
+				<div class="gauge-label">Агрегована оцінка ризику r(P)</div>
+				<div class="conclusion-box" id="conclusion">Розраховується...</div>
+
+				<div class="risk-chart">
+					<div class="chart-title">Вплив критеріїв на загальну оцінку</div>
+					<div class="bar-chart" id="barChart"></div>
+				</div>
+			</div>
+		</div>
+
+		<script src="script.js"></script>
+	</body>
+</html>
