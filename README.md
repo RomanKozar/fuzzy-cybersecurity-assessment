@@ -1,5 +1,11 @@
 # 🛩️ Гібридна інтелектуальна модель оцінювання ризиків польотів UAV
 
+[![Live Demo](https://img.shields.io/badge/demo-online-blue.svg?style=for-the-badge)](https://romankozar.github.io/fuzzy-cybersecurity-assessment/)
+[![Methodology](https://img.shields.io/badge/Method-Fuzzy--Hybrid-cyan.svg?style=for-the-badge)](https://github.com/RomanKozar/fuzzy-cybersecurity-assessment)
+[![Version](https://img.shields.io/badge/version-1.0.0-orange.svg?style=for-the-badge)](https://github.com/RomanKozar/fuzzy-cybersecurity-assessment/releases)
+
+![Головна сторінка](preview.png)
+
 ## 🎯 Призначення
 
 Веб-додаток для оцінювання ризиків виконання польотів безпілотних літальних апаратів (UAV) над об’єктами критичної інфраструктури.
@@ -16,8 +22,6 @@
 - 📱 **Адаптивний дизайн** для різних пристроїв
 
 ---
-
-![Головна сторінка](preview.png)
 
 ## 🧩 Введення даних
 
